@@ -2,181 +2,745 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Google Verification -->
   <meta name="google-site-verification" content="qB9_2HKHarr5jueYY4xlrRnALr2wO5jCgFAA-YIMhkc" />
 
   <title>Ontario Relief Operating Engineers | Certified Coverage 24/7</title>
+  <meta
+    name="description"
+    content="Certified operating engineers providing emergency, short-term, and long-term coverage across Ontario. Refrigeration A operators, Refrigeration B operators, and 2nd, 3rd, and 4th Class Stationary Engineers available."
+  />
+  <meta
+    name="keywords"
+    content="Ontario Relief Operating Engineers, certified operating engineer Ontario, Refrigeration A operator, Refrigeration B operator, 2nd Class Stationary Engineer, 3rd Class Stationary Engineer, 4th Class Stationary Engineer, long term operating engineer coverage, boiler operator coverage, refrigeration plant coverage Ontario"
+  />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Ontario Relief Operating Engineers" />
+  <link rel="canonical" href="https://ontario-relief-website.vercel.app/" />
 
-  <meta name="description" content="Certified operating engineers providing emergency, short-term, and long-term coverage across Ontario. Refrigeration A/B operators and 2nd, 3rd, 4th Class engineers available." />
+  <meta property="og:title" content="Ontario Relief Operating Engineers | Certified Coverage 24/7" />
+  <meta
+    property="og:description"
+    content="Certified operating engineer coverage for emergency, short-term, and long-term staffing across refrigeration plants, industrial facilities, and boiler systems."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ontario-relief-website.vercel.app/" />
 
   <style>
+    :root {
+      --bg: #08101d;
+      --bg2: #0d1728;
+      --panel: #121f33;
+      --panel2: #16263d;
+      --text: #f5f7fb;
+      --muted: #c9d5e6;
+      --line: rgba(255,255,255,0.08);
+      --accent: #22c55e;
+      --accent-dark: #16a34a;
+      --shadow: 0 20px 40px rgba(0, 0, 0, 0.28);
+      --radius: 18px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b1220;
-      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(34,197,94,0.08), transparent 22%),
+        linear-gradient(180deg, #07101c 0%, #0b1423 55%, #08101d 100%);
+      color: var(--text);
+      line-height: 1.6;
     }
 
-    header {
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      border-bottom: 1px solid var(--line);
+      background: rgba(7, 16, 28, 0.92);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .topbar-inner {
+      min-height: 78px;
       display: flex;
       align-items: center;
-      gap: 15px;
-      padding: 20px;
-      background: #020617;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 12px 0;
     }
 
-    header img {
-      width: 60px;
-      height: 60px;
-      border-radius: 8px;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
     }
 
-    .hero {
-      text-align: center;
-      padding: 60px 20px;
+    .brand-logo {
+      width: 58px;
+      height: 58px;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #0f172a;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      flex: 0 0 auto;
     }
 
-    .hero h1 {
-      font-size: 40px;
-    }
-
-    .hero img {
+    .brand-logo img {
       width: 100%;
-      max-width: 900px;
-      border-radius: 12px;
-      margin-top: 25px;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .brand-text small {
+      color: var(--muted);
+      font-weight: 500;
+      margin-top: 3px;
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .phone-inline {
+      color: var(--muted);
+      font-size: 14px;
     }
 
     .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: 12px;
+      padding: 14px 20px;
+      font-weight: 700;
+      transition: 0.2s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #07160d;
+      box-shadow: 0 14px 30px rgba(34, 197, 94, 0.25);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-dark);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.04);
+      border-color: var(--line);
+      color: #fff;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.08);
+      transform: translateY(-1px);
+    }
+
+    .hero {
+      padding: 72px 0 36px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .hero-copy,
+    .hero-image-card {
+      background: linear-gradient(180deg, rgba(18,31,51,0.95), rgba(12,22,37,0.95));
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-copy {
+      padding: 42px;
+    }
+
+    .eyebrow {
       display: inline-block;
-      padding: 15px 25px;
-      background: #22c55e;
-      color: black;
-      text-decoration: none;
-      margin-top: 20px;
-      border-radius: 6px;
-      font-weight: bold;
+      padding: 8px 12px;
+      border: 1px solid rgba(34,197,94,0.35);
+      color: #c9ffd8;
+      background: rgba(34,197,94,0.08);
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: 1.04;
+      margin: 0 0 18px;
+      max-width: 820px;
+    }
+
+    .hero p.lead {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin: 0 0 24px;
+      max-width: 760px;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 22px;
+    }
+
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
     }
 
     .pill {
-      display: inline-block;
-      padding: 8px 14px;
-      margin: 5px;
-      border-radius: 20px;
-      background: #1e293b;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      color: #e8eef8;
+      font-size: 14px;
+    }
+
+    .hero-image-card {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-image {
+      position: relative;
+      min-height: 100%;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      min-height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: auto 18px 18px 18px;
+      background: rgba(8, 16, 29, 0.82);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 18px;
+      padding: 18px;
+      backdrop-filter: blur(4px);
+    }
+
+    .hero-overlay h2 {
+      margin: 0 0 8px;
+      font-size: 1.2rem;
+    }
+
+    .hero-overlay p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.96rem;
     }
 
     .section {
-      padding: 50px 20px;
-      max-width: 1000px;
-      margin: auto;
+      padding: 34px 0;
     }
 
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      margin: 10px 0;
-      border-radius: 8px;
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 18px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 760px;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
+      gap: 18px;
     }
 
-    .grid img {
-      width: 100%;
-      border-radius: 10px;
+    .grid-5 {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
     }
 
-    footer {
+    .grid-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+      background: linear-gradient(180deg, var(--panel), var(--panel2));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.1rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .feature-number {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: rgba(34,197,94,0.12);
+      color: #b7ffd0;
+      font-weight: 800;
+      margin-bottom: 14px;
+      border: 1px solid rgba(34,197,94,0.2);
+    }
+
+    .operator-card {
       text-align: center;
-      padding: 20px;
-      background: #020617;
+      font-weight: 700;
+      padding: 22px 18px;
+    }
+
+    .showcase {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .showcase-card {
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .showcase-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-top-left-radius: var(--radius);
+      border-top-right-radius: var(--radius);
+    }
+
+    .showcase-copy {
+      padding: 22px;
+    }
+
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .contact-box {
+      background: linear-gradient(180deg, var(--panel), var(--panel2));
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-lines {
+      display: grid;
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .contact-line {
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255,255,255,0.04);
+    }
+
+    .contact-line strong {
+      display: block;
+      margin-bottom: 4px;
+      color: #fff;
+    }
+
+    .footer {
+      margin-top: 40px;
+      border-top: 1px solid var(--line);
+      padding: 24px 0 40px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 1100px) {
+      .grid-5 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 1020px) {
+      .hero-grid,
+      .contact-wrap,
+      .grid-4,
+      .grid-2,
+      .showcase {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .container {
+        width: min(var(--max), calc(100% - 26px));
+      }
+
+      .hero-copy,
+      .card,
+      .contact-box,
+      .showcase-copy {
+        padding: 20px;
+      }
+
+      .phone-inline {
+        display: none;
+      }
+
+      .topbar-inner {
+        align-items: flex-start;
+      }
+
+      .brand-logo {
+        width: 48px;
+        height: 48px;
+      }
+
+      .grid-5 {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Ontario Relief Operating Engineers",
+    "url": "https://ontario-relief-website.vercel.app/",
+    "telephone": "+1-519-590-7449",
+    "email": "ontarioreliefoperatingengineer@gmail.com",
+    "areaServed": [
+      "Toronto",
+      "GTA",
+      "Southern Ontario",
+      "London, Ontario"
+    ],
+    "description": "Certified operating engineers providing emergency, short-term, and long-term coverage across refrigeration plants, industrial facilities, and boiler systems.",
+    "serviceType": [
+      "Emergency coverage",
+      "Vacation coverage",
+      "Sick call relief",
+      "Short-term plant support",
+      "Long-term coverage"
+    ]
+  }
+  </script>
 </head>
-
 <body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <div class="brand-logo">
+          <img src="logo.png" alt="Ontario Relief Operating Engineers logo" />
+        </div>
+        <div class="brand-text">
+          Ontario Relief Operating Engineers
+          <small>24/7 Certified Coverage | GTA &amp; Southern Ontario</small>
+        </div>
+      </div>
 
-<header>
-  <img src="logo.png" alt="Logo">
-  <div>
-    <h2>Ontario Relief Operating Engineers</h2>
-    <p>24/7 Certified Coverage | GTA & Southern Ontario</p>
-  </div>
-</header>
+      <div class="top-actions">
+        <div class="phone-inline">519-590-7449</div>
+        <a class="btn btn-secondary" href="mailto:ontarioreliefoperatingengineer@gmail.com">Email</a>
+        <a class="btn btn-primary" href="tel:15195907449">Call Now</a>
+      </div>
+    </div>
+  </header>
 
-<section class="hero">
-  <h1>Need a Certified Operating Engineer Fast?</h1>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Certified operating engineer coverage</div>
+          <h1>Need a Certified Operating Engineer Fast?</h1>
+          <p class="lead">
+            We provide certified operating engineers for emergency, short-term, and long-term coverage
+            across refrigeration plants, industrial facilities, and boiler systems.
+          </p>
 
-  <p>
-    We provide certified operating engineers for emergency, short-term, and long-term coverage
-    across refrigeration plants, industrial facilities, and boiler systems.
-  </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="tel:15195907449">Call 519-590-7449</a>
+            <a class="btn btn-secondary" href="#contact">Contact Us</a>
+          </div>
 
-  <div>
-    <span class="pill">Emergency Coverage</span>
-    <span class="pill">Short-Term</span>
-    <span class="pill">Long-Term</span>
-  </div>
+          <div class="trust-row">
+            <div class="pill">Emergency Coverage</div>
+            <div class="pill">Short-Term</div>
+            <div class="pill">Long-Term</div>
+            <div class="pill">Refrigeration &amp; Boiler Systems</div>
+          </div>
+        </div>
 
-  <a href="tel:15195907449" class="btn">Call Now</a>
+        <aside class="hero-image-card">
+          <div class="hero-image">
+            <img src="engineer-checking-system.png" alt="Engineer charting compressor" />
+            <div class="hero-overlay">
+              <h2>Fast access to certified coverage</h2>
+              <p>
+                Reliable operating engineer support for refrigeration plants, industrial operations,
+                and boiler systems across Ontario.
+              </p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
 
-  <img src="engineer-checking-system.png" alt="Engineer charting compressor">
-</section>
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Certified Operators Available</h2>
+          <p>Coverage is available from certified personnel across refrigeration and stationary engineering classifications.</p>
+        </div>
 
-<section class="section">
-  <h2>Certified Operators Available</h2>
+        <div class="grid grid-5">
+          <div class="card operator-card">Certified Refrigeration "A" Operators</div>
+          <div class="card operator-card">Certified Refrigeration "B" Operators</div>
+          <div class="card operator-card">4th Class Stationary Engineers</div>
+          <div class="card operator-card">3rd Class Stationary Engineers</div>
+          <div class="card operator-card">2nd Class Stationary Engineers</div>
+        </div>
+      </div>
+    </section>
 
-  <div class="card">Certified Refrigeration "A" Operators</div>
-  <div class="card">Certified Refrigeration "B" Operators</div>
-  <div class="card">2nd Class Stationary Engineers</div>
-  <div class="card">3rd Class Stationary Engineers</div>
-  <div class="card">4th Class Stationary Engineers</div>
-</section>
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Services</h2>
+          <p>Flexible coverage options for urgent staffing gaps, scheduled relief, and ongoing facility needs.</p>
+        </div>
 
-<section class="section">
-  <h2>Services</h2>
+        <div class="grid grid-4">
+          <div class="card">
+            <div class="feature-number">1</div>
+            <h3>Emergency Coverage</h3>
+            <p>Fast support for urgent absences and last-minute operating coverage needs.</p>
+          </div>
 
-  <div class="card">Emergency Coverage (24/7)</div>
-  <div class="card">Vacation Coverage</div>
-  <div class="card">Sick Call Relief</div>
-  <div class="card">Short-Term Plant Support</div>
-  <div class="card">Long-Term Coverage</div>
-</section>
+          <div class="card">
+            <div class="feature-number">2</div>
+            <h3>Vacation Coverage</h3>
+            <p>Reliable planned relief while regular staff are away.</p>
+          </div>
 
-<section class="section">
-  <h2>Refrigeration & Industrial Equipment</h2>
+          <div class="card">
+            <div class="feature-number">3</div>
+            <h3>Sick Call Relief</h3>
+            <p>Coverage for unexpected call-ins so your operation stays supported.</p>
+          </div>
 
-  <div class="grid">
-    <img src="hero-ammonia-compressor.jpg">
-    <img src="facility-support.jpg">
-  </div>
-</section>
+          <div class="card">
+            <div class="feature-number">4</div>
+            <h3>Short-Term Plant Support</h3>
+            <p>Temporary operating engineer support for planned or unplanned requirements.</p>
+          </div>
 
-<section class="section">
-  <h2>Boiler Systems</h2>
+          <div class="card">
+            <div class="feature-number">5</div>
+            <h3>Long-Term Coverage</h3>
+            <p>Extended operating engineer coverage for ongoing staffing needs, temporary replacements, and long-duration projects.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <div class="grid">
-    <img src="Boilers.jpg">
-    <img src="Boilers 1.jpg">
-  </div>
-</section>
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Refrigeration &amp; Industrial Equipment</h2>
+          <p>Specialized coverage for industrial environments, refrigeration systems, and plant operations.</p>
+        </div>
 
-<section class="section">
-  <h2>Contact</h2>
+        <div class="showcase">
+          <div class="card showcase-card">
+            <img src="hero-ammonia-compressor.jpg" alt="Ammonia compressor equipment" />
+            <div class="showcase-copy">
+              <h3>Industrial refrigeration systems</h3>
+              <p>Coverage for facilities operating complex refrigeration and process equipment.</p>
+            </div>
+          </div>
 
-  <p>📞 519-590-7449</p>
-  <p>📧 ontarioreliefoperatingengineer@gmail.com</p>
-</section>
+          <div class="card showcase-card">
+            <img src="facility-support.jpg" alt="Industrial facility support" />
+            <div class="showcase-copy">
+              <h3>Facility operations support</h3>
+              <p>Reliable certified coverage for plants and industrial operations that need experienced staffing support.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<footer>
-  <p>© 2026 Ontario Relief Operating Engineers</p>
-</footer>
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Boiler Systems</h2>
+          <p>Boiler system coverage is included as part of our certified operating engineer support offering.</p>
+        </div>
 
+        <div class="showcase">
+          <div class="card showcase-card">
+            <img src="boilers.jpg" alt="Boiler system" />
+            <div class="showcase-copy">
+              <h3>Boiler room coverage</h3>
+              <p>Support for facilities operating boiler systems and plant utility equipment.</p>
+            </div>
+          </div>
+
+          <div class="card showcase-card">
+            <img src="boilers1.jpg" alt="Boiler equipment" />
+            <div class="showcase-copy">
+              <h3>Additional boiler system support</h3>
+              <p>Expanded coverage for facilities requiring certified operating engineer staffing around boiler operations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container contact-wrap">
+        <div class="contact-box">
+          <h2 style="margin-top:0;">Contact</h2>
+          <p style="color: var(--muted); margin-top: 0;">
+            Need certified operating engineer coverage? Reach out directly by phone or email.
+          </p>
+
+          <div class="contact-lines">
+            <div class="contact-line">
+              <strong>Phone</strong>
+              <a href="tel:15195907449">519-590-7449</a>
+            </div>
+
+            <div class="contact-line">
+              <strong>Email</strong>
+              <a href="mailto:ontarioreliefoperatingengineer@gmail.com">ontarioreliefoperatingengineer@gmail.com</a>
+            </div>
+
+            <div class="contact-line">
+              <strong>Service Area</strong>
+              GTA and Southern Ontario
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-box">
+          <h2 style="margin-top:0;">Best Information to Include</h2>
+          <div class="contact-lines">
+            <div class="contact-line">
+              <strong>Facility</strong>
+              Facility name and location
+            </div>
+            <div class="contact-line">
+              <strong>Timing</strong>
+              Shift date, hours, and whether coverage is urgent
+            </div>
+            <div class="contact-line">
+              <strong>Type of coverage</strong>
+              Emergency, short-term, long-term, vacation, or sick relief
+            </div>
+            <div class="contact-line">
+              <strong>Certification needed</strong>
+              Refrigeration "A", Refrigeration "B", 4th, 3rd, or 2nd Class
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© 2026 Ontario Relief Operating Engineers</div>
+      <div>Certified operating engineer coverage across refrigeration plants, industrial facilities, and boiler systems</div>
+    </div>
+  </footer>
 </body>
 </html>
