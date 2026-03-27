@@ -7,7 +7,7 @@
   <title>Ontario Relief Operating Engineers | 24/7 Emergency Coverage GTA</title>
   <meta
     name="description"
-    content="TSSA-certified relief operating engineer coverage for refrigeration plants, cold storage facilities, food plants, ice rinks, and industrial operations across the GTA and Southern Ontario. Emergency, vacation, sick call, and short-notice coverage available."
+    content="TSSA-certified relief operating engineer coverage for refrigeration plants, cold storage facilities, food plants, ice rinks, and industrial operations across the GTA and Southern Ontario."
   />
   <meta
     name="keywords"
@@ -15,25 +15,20 @@
   />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Ontario Relief Operating Engineers" />
-  <meta name="google-site-verification" content="qB9_2HKHarr5jueYY4xlrRnALr2wO5jCgFAA-YIMhkc" />" />
+
+  <!-- Replace with your Google Search Console HTML tag code -->
+  <meta name="google-site-verification" content="qB9_2HKHarr5jueYY4xlrRnALr2wO5jCgFAA-YIMhkc" />
 
   <link rel="canonical" href="https://ontario-relief-website.vercel.app/" />
 
   <meta property="og:title" content="Ontario Relief Operating Engineers | 24/7 Emergency Coverage GTA" />
   <meta
     property="og:description"
-    content="Relief operating engineer coverage for refrigeration plants, cold storage facilities, food plants, and industrial operations across the GTA and Southern Ontario."
+    content="Relief operating engineer coverage for refrigeration plants, cold storage facilities, food plants, ice rinks, and industrial operations across the GTA and Southern Ontario."
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ontario-relief-website.vercel.app/" />
   <meta property="og:site_name" content="Ontario Relief Operating Engineers" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Ontario Relief Operating Engineers" />
-  <meta
-    name="twitter:description"
-    content="24/7 emergency, vacation, sick call, and short-notice operating engineer coverage in Ontario."
-  />
 
   <style>
     :root {
@@ -86,7 +81,7 @@
 
     .topbar {
       border-bottom: 1px solid var(--line);
-      background: rgba(7, 16, 28, 0.86);
+      background: rgba(7, 16, 28, 0.9);
       backdrop-filter: blur(8px);
       position: sticky;
       top: 0;
@@ -94,7 +89,7 @@
     }
 
     .topbar-inner {
-      min-height: 72px;
+      min-height: 78px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -111,17 +106,21 @@
       letter-spacing: 0.2px;
     }
 
-    .brand-badge {
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, var(--accent), #59e28a);
-      color: #082011;
-      display: grid;
-      place-items: center;
-      font-weight: 800;
+    .brand-logo {
+      width: 58px;
+      height: 58px;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #0f172a;
+      border: 1px solid var(--line);
       box-shadow: var(--shadow);
       flex: 0 0 auto;
+    }
+
+    .brand-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .brand-text {
@@ -190,13 +189,13 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
+      grid-template-columns: 1.08fr 0.92fr;
       gap: 28px;
       align-items: stretch;
     }
 
     .hero-copy,
-    .hero-card {
+    .hero-image-card {
       background: linear-gradient(180deg, rgba(18,31,51,0.95), rgba(12,22,37,0.95));
       border: 1px solid var(--line);
       border-radius: 24px;
@@ -257,40 +256,43 @@
       font-size: 14px;
     }
 
-    .hero-card {
-      padding: 28px;
+    .hero-image-card {
+      overflow: hidden;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      gap: 18px;
     }
 
-    .hero-card h2 {
+    .hero-image {
+      position: relative;
+      min-height: 100%;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      min-height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: auto 18px 18px 18px;
+      background: rgba(8, 16, 29, 0.82);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 18px;
+      padding: 18px;
+      backdrop-filter: blur(4px);
+    }
+
+    .hero-overlay h2 {
+      margin: 0 0 8px;
+      font-size: 1.2rem;
+    }
+
+    .hero-overlay p {
       margin: 0;
-      font-size: 1.3rem;
-    }
-
-    .hero-card ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .hero-card li {
-      padding: 12px 0;
-      border-bottom: 1px solid var(--line);
       color: var(--muted);
-    }
-
-    .hero-card li:last-child {
-      border-bottom: 0;
-    }
-
-    .mini-card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 16px;
+      font-size: 0.96rem;
     }
 
     .section {
@@ -359,6 +361,29 @@
       font-weight: 800;
       margin-bottom: 14px;
       border: 1px solid rgba(34,197,94,0.2);
+    }
+
+    .showcase {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .showcase-card {
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .showcase-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-top-left-radius: var(--radius);
+      border-top-right-radius: var(--radius);
+    }
+
+    .showcase-copy {
+      padding: 22px;
     }
 
     .split {
@@ -485,7 +510,8 @@
       .split,
       .form-wrap,
       .grid-4,
-      .grid-3 {
+      .grid-3,
+      .showcase {
         grid-template-columns: 1fr;
       }
     }
@@ -496,9 +522,9 @@
       }
 
       .hero-copy,
-      .hero-card,
       .card,
-      .contact-box {
+      .contact-box,
+      .showcase-copy {
         padding: 20px;
       }
 
@@ -512,6 +538,11 @@
 
       .topbar-inner {
         align-items: flex-start;
+      }
+
+      .brand-logo {
+        width: 48px;
+        height: 48px;
       }
     }
   </style>
@@ -544,7 +575,9 @@
   <header class="topbar">
     <div class="container topbar-inner">
       <div class="brand">
-        <div class="brand-badge">OR</div>
+        <div class="brand-logo">
+          <img src="logo.png" alt="Ontario Relief Operating Engineers logo" />
+        </div>
         <div class="brand-text">
           Ontario Relief Operating Engineers
           <small>24/7 emergency, vacation, and short-notice coverage</small>
@@ -577,29 +610,23 @@
           </div>
 
           <div class="trust-row">
-            <div class="pill">Fully insured positioning</div>
+            <div class="pill">Professional relief coverage</div>
             <div class="pill">GTA to London, Ontario</div>
             <div class="pill">Emergency &amp; scheduled coverage</div>
             <div class="pill">Fast response for urgent shift gaps</div>
           </div>
         </div>
 
-        <aside class="hero-card">
-          <div>
-            <h2>Why companies call</h2>
-            <ul>
-              <li>Sudden absence or sick call leaves a shift uncovered.</li>
-              <li>Vacation scheduling creates staffing gaps.</li>
-              <li>Short-term operational support is needed fast.</li>
-              <li>Facilities want a professional contact they can reach quickly.</li>
-            </ul>
-          </div>
-
-          <div class="mini-card">
-            <strong>What to send when requesting coverage</strong>
-            <p class="note" style="margin-top:8px;">
-              Facility name, location, shift date and time, coverage type, and the class or experience required.
-            </p>
+        <aside class="hero-image-card">
+          <div class="hero-image">
+            <img src="hero-ammonia-compressor.jpg" alt="Operating engineer working near ammonia compressor equipment" />
+            <div class="hero-overlay">
+              <h2>Built for urgent plant coverage needs</h2>
+              <p>
+                Support for refrigeration plants, cold storage operations, food plants,
+                rinks, and industrial facilities that need qualified operating engineer coverage.
+              </p>
+            </div>
           </div>
         </aside>
       </div>
@@ -638,6 +665,33 @@
     </section>
 
     <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Photos</h2>
+          <p>Use your own branded images to make the company look established and real when clients check the site.</p>
+        </div>
+
+        <div class="showcase">
+          <div class="card showcase-card">
+            <img src="engineer-checking-system.jpg" alt="Engineer checking industrial refrigeration system" />
+            <div class="showcase-copy">
+              <h3>Professional plant support</h3>
+              <p>Show actual engineer-at-work images to make the business feel credible and specialized.</p>
+            </div>
+          </div>
+
+          <div class="card showcase-card">
+            <img src="facility-support.jpg" alt="Industrial facility and equipment support image" />
+            <div class="showcase-copy">
+              <h3>Industrial facility coverage</h3>
+              <p>Images of plant equipment and facility environments make the service clearer to plant managers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="container split">
         <div class="card">
           <div class="section-head" style="margin-bottom:16px;">
@@ -660,30 +714,6 @@
             <div class="list-item"><span class="highlight">Fast response</span><br />Built for short-notice support when facilities need help quickly.</div>
             <div class="list-item"><span class="highlight">Flexible scheduling</span><br />One shift, multiple shifts, vacation coverage, or temporary support.</div>
             <div class="list-item"><span class="highlight">Ontario service area</span><br />Serving the GTA and Southern Ontario, including London-area coverage needs.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>When to call</h2>
-          <p>Facilities typically reach out when they need coverage quickly or want a reliable backup option already lined up.</p>
-        </div>
-
-        <div class="grid grid-3">
-          <div class="card">
-            <h3>Last-minute shift gap</h3>
-            <p>Your scheduled operator is unavailable and you need fast coverage.</p>
-          </div>
-          <div class="card">
-            <h3>Vacation planning</h3>
-            <p>You want reliable relief lined up before your regular staff go off.</p>
-          </div>
-          <div class="card">
-            <h3>Short-term staffing pressure</h3>
-            <p>You need temporary plant support for a limited time without a long process.</p>
           </div>
         </div>
       </div>
