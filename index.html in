@@ -1,1 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ontario Relief Operating Engineers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
+<body style="font-family: Arial; margin:0; background:#0b1728; color:white;">
+
+<!-- HEADER -->
+<div style="padding:20px; background:#020617; display:flex; align-items:center; gap:15px;">
+  <img src="Logo - ChatGPT Image Mar 22, 2026, 09_59_53 PM.png" style="height:60px;">
+  <h1 style="margin:0;">Ontario Relief Operating Engineers</h1>
+</div>
+
+<!-- HERO -->
+<div style="padding:40px; text-align:center;">
+  <h2 style="font-size:40px;">Need a licensed operating engineer fast?</h2>
+  
+  <h3 style="color:#22d3ee;">24/7 Emergency Coverage Available</h3>
+
+  <p>
+    Fully insured relief operating engineer coverage for refrigeration plants,
+    cold storage facilities, and industrial operations across GTA to London Ontario.
+  </p>
+
+  <a href="tel:5195907449" style="display:inline-block; margin-top:20px; background:#22d3ee; color:black; padding:15px 25px; font-weight:bold; text-decoration:none;">
+    CALL NOW: 519-590-7449
+  </a>
+</div>
+
+<!-- IMAGE -->
+<img src="20220928-230822-4--RWF-II-package - Frick.jpg" style="width:100%;">
+
+<!-- SERVICES -->
+<div style="padding:40px;">
+  <h2>Services</h2>
+
+  <ul>
+    <li>Emergency coverage</li>
+    <li>Vacation coverage</li>
+    <li>Sick call relief</li>
+    <li>Short-term plant support</li>
+  </ul>
+</div>
+
+<!-- WHY -->
+<div style="padding:40px; background:#020617;">
+  <h2>Why Companies Use Us</h2>
+
+  <ul>
+    <li>Last-minute call-in coverage</li>
+    <li>Maintain TSSA compliance</li>
+    <li>Avoid plant downtime</li>
+    <li>No need to hire full-time staff</li>
+  </ul>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" style="padding:40px;">
+  <h2>Contact</h2>
+
+  <p><b>Phone:</b> 519-590-7449</p>
+  <p><b>Email:</b> ontarioreliefoperatingengineer@gmail.com</p>
+
+  <form action="https://formsubmit.co/ontarioreliefoperatingengineer@gmail.com" method="POST">
+    <input name="name" placeholder="Name" required style="display:block; margin-bottom:10px; padding:10px; width:100%;">
+    <input name="phone" placeholder="Phone" required style="display:block; margin-bottom:10px; padding:10px; width:100%;">
+    <input name="email" placeholder="Email" required style="display:block; margin-bottom:10px; padding:10px; width:100%;">
+    <textarea name="message" placeholder="What coverage do you need?" required style="display:block; margin-bottom:10px; padding:10px; width:100%;"></textarea>
+
+    <button type="submit" style="padding:15px; background:#22d3ee; border:none; font-weight:bold;">
+      Submit
+    </button>
+  </form>
+</div>
+
+</body>
+</html>
