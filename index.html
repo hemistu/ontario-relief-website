@@ -1,364 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Search Console verification -->
-  <meta name="google-site-verification" content="<meta name="google-site-verification" content="qB9_2HKHarr5jueYY4xlrRnALr2wO5jCgFAA-YIMhkc" />" />
+  <!-- ✅ GOOGLE VERIFICATION (PASTE YOUR CODE HERE) -->
+  <meta name="google-site-verification" content="PASTE_YOUR_GOOGLE_CODE_HERE" />
 
-  <title>Ontario Relief Operating Engineers | 24/7 Emergency Coverage</title>
-  <meta
-    name="description"
-    content="Ontario Relief Operating Engineers provides TSSA-certified relief operating engineer coverage for refrigeration plants, cold storage facilities, food plants, ice rinks, and industrial operations across the GTA and Southern Ontario."
-  />
-  <meta
-    name="keywords"
-    content="Ontario Relief Operating Engineers, relief operating engineer Ontario, TSSA certified operating engineer, refrigeration plant coverage, ammonia refrigeration operator, emergency engineer coverage, GTA operating engineer"
-  />
-  <meta name="robots" content="index, follow" />
-  <meta name="author" content="Ontario Relief Operating Engineers" />
+  <!-- ✅ SEO -->
+  <title>Ontario Relief Operating Engineers | 24/7 Emergency Coverage GTA</title>
+  <meta name="description" content="TSSA-certified relief operating engineers providing emergency, vacation, and short-term coverage for refrigeration plants, cold storage facilities, and industrial operations across the GTA and Southern Ontario.">
+  <meta name="keywords" content="relief operating engineer Ontario, TSSA engineer GTA, ammonia refrigeration operator, refrigeration plant coverage Ontario">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Ontario Relief Operating Engineers" />
-  <meta
-    property="og:description"
-    content="24/7 emergency, vacation, and short-notice operating engineer coverage across the GTA and Southern Ontario."
-  />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://ontario-relief-website.vercel.app/" />
+  <!-- Social -->
+  <meta property="og:title" content="Ontario Relief Operating Engineers">
+  <meta property="og:description" content="24/7 Emergency Operating Engineer Coverage across GTA & Southern Ontario">
+  <meta property="og:type" content="website">
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Arial, sans-serif;
       background: #0b1220;
-      color: #ffffff;
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 20px;
+      color: white;
     }
 
     header {
-      background: linear-gradient(135deg, #09111f, #132238);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      text-align: center;
+      padding: 40px;
+      background: #020617;
     }
 
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 0;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .brand {
-      font-size: 22px;
-      font-weight: 700;
-      letter-spacing: 0.3px;
-    }
-
-    .contact-top {
-      font-size: 15px;
-      color: #d7e3f4;
+    h1 {
+      margin: 0;
+      font-size: 36px;
     }
 
     .hero {
-      padding: 72px 0 56px;
-    }
-
-    .hero h1 {
-      font-size: 48px;
-      line-height: 1.1;
-      margin: 0 0 18px;
-      max-width: 760px;
-    }
-
-    .hero p {
-      font-size: 20px;
-      color: #d7e3f4;
-      max-width: 760px;
-      margin: 0 0 28px;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-bottom: 26px;
+      text-align: center;
+      padding: 60px 20px;
     }
 
     .btn {
       display: inline-block;
-      padding: 14px 22px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 700;
-      transition: 0.2s ease;
-    }
-
-    .btn-primary {
+      padding: 15px 25px;
       background: #22c55e;
-      color: #08120d;
+      color: black;
+      text-decoration: none;
+      margin-top: 20px;
+      border-radius: 6px;
+      font-weight: bold;
     }
 
-    .btn-primary:hover {
-      background: #1fb357;
-    }
-
-    .btn-secondary {
-      border: 1px solid rgba(255,255,255,0.18);
-      color: #ffffff;
-      background: rgba(255,255,255,0.04);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255,255,255,0.08);
-    }
-
-    .hero-points {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .pill {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.08);
-      color: #eaf2ff;
-      padding: 10px 14px;
-      border-radius: 999px;
-      font-size: 14px;
-    }
-
-    section {
-      padding: 56px 0;
-    }
-
-    .section-title {
-      font-size: 32px;
-      margin: 0 0 18px;
-    }
-
-    .section-subtitle {
-      color: #c9d7ea;
-      margin: 0 0 28px;
-      max-width: 760px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
+    .section {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
     }
 
     .card {
-      background: #121c2d;
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 14px;
-      padding: 22px;
-    }
-
-    .card h3 {
-      margin: 0 0 10px;
-      font-size: 20px;
-    }
-
-    .card p {
-      margin: 0;
-      color: #d0dced;
-    }
-
-    .highlight {
-      background: #0f1a2b;
-    }
-
-    .contact-box {
-      background: linear-gradient(135deg, #132238, #0e1726);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 16px;
-      padding: 28px;
-    }
-
-    .contact-box p {
-      font-size: 18px;
-      margin: 8px 0;
-      color: #ecf4ff;
+      background: #1e293b;
+      padding: 20px;
+      margin: 10px 0;
+      border-radius: 8px;
     }
 
     footer {
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding: 26px 0 40px;
-      color: #b9c8dc;
-      font-size: 14px;
-    }
-
-    @media (max-width: 800px) {
-      .hero h1 {
-        font-size: 36px;
-      }
-
-      .hero p {
-        font-size: 18px;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
+      text-align: center;
+      padding: 20px;
+      background: #020617;
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <div class="container">
-      <div class="topbar">
-        <div class="brand">Ontario Relief Operating Engineers</div>
-        <div class="contact-top">
-          519-590-7449 | ontarioreliefoperatingengineer@gmail.com
-        </div>
-      </div>
 
-      <div class="hero">
-        <h1>Need a licensed operating engineer fast?</h1>
-        <p>
-          TSSA-certified relief operating engineer coverage for refrigeration plants,
-          cold storage facilities, food plants, ice rinks, and industrial operations
-          across the GTA and Southern Ontario.
-        </p>
+<header>
+  <h1>Ontario Relief Operating Engineers</h1>
+  <p>24/7 Emergency Coverage | GTA & Southern Ontario</p>
+</header>
 
-        <div class="buttons">
-          <a class="btn btn-primary" href="tel:15195907449">Call Now</a>
-          <a class="btn btn-secondary" href="mailto:ontarioreliefoperatingengineer@gmail.com">Email Now</a>
-        </div>
+<section class="hero">
+  <h2>Need a Licensed Operating Engineer Fast?</h2>
+  <p>
+    TSSA-certified relief operating engineer coverage for refrigeration plants,
+    cold storage facilities, and industrial operations.
+  </p>
 
-        <div class="hero-points">
-          <div class="pill">24/7 Emergency Coverage</div>
-          <div class="pill">Vacation & Sick Relief</div>
-          <div class="pill">Short-Notice Plant Support</div>
-          <div class="pill">GTA & Southern Ontario</div>
-        </div>
-      </div>
-    </div>
-  </header>
+  <a href="tel:15195907449" class="btn">Call Now</a>
+</section>
 
-  <section>
-    <div class="container">
-      <h2 class="section-title">Services</h2>
-      <p class="section-subtitle">
-        Relief coverage for facilities that need reliable licensed operating engineer support.
-      </p>
+<section class="section">
+  <h2>Services</h2>
 
-      <div class="grid">
-        <div class="card">
-          <h3>Emergency Coverage</h3>
-          <p>Fast response for urgent shift gaps, unexpected absences, and short-notice needs.</p>
-        </div>
-        <div class="card">
-          <h3>Vacation Coverage</h3>
-          <p>Keep your operation running smoothly while regular staff are away.</p>
-        </div>
-        <div class="card">
-          <h3>Sick Call Relief</h3>
-          <p>Coverage for sudden call-ins so your plant stays staffed and compliant.</p>
-        </div>
-        <div class="card">
-          <h3>Short-Term Plant Support</h3>
-          <p>Flexible temporary operating engineer support for planned or unplanned needs.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="card">Emergency Coverage (24/7)</div>
+  <div class="card">Vacation Coverage</div>
+  <div class="card">Sick Call Relief</div>
+  <div class="card">Short-Term Plant Support</div>
+</section>
 
-  <section class="highlight">
-    <div class="container">
-      <h2 class="section-title">Who We Help</h2>
-      <p class="section-subtitle">
-        We support facilities that depend on safe, reliable equipment operation and licensed coverage.
-      </p>
+<section class="section">
+  <h2>Industries We Serve</h2>
 
-      <div class="grid">
-        <div class="card">
-          <h3>Refrigeration Plants</h3>
-          <p>Support for facilities operating ammonia and industrial refrigeration systems.</p>
-        </div>
-        <div class="card">
-          <h3>Cold Storage Facilities</h3>
-          <p>Coverage for facilities that require dependable operating engineer availability.</p>
-        </div>
-        <div class="card">
-          <h3>Food Processing Plants</h3>
-          <p>Relief support for industrial operations that need qualified plant coverage.</p>
-        </div>
-        <div class="card">
-          <h3>Ice Rinks & Industrial Sites</h3>
-          <p>Flexible coverage for facilities requiring experienced operating engineer support.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="card">Refrigeration Plants</div>
+  <div class="card">Cold Storage Facilities</div>
+  <div class="card">Food Processing Plants</div>
+  <div class="card">Ice Rinks</div>
+</section>
 
-  <section>
-    <div class="container">
-      <h2 class="section-title">Why Choose Ontario Relief Operating Engineers</h2>
-      <p class="section-subtitle">
-        Professional, responsive, and focused on dependable shift coverage for Ontario facilities.
-      </p>
+<section class="section">
+  <h2>Contact</h2>
 
-      <div class="grid">
-        <div class="card">
-          <h3>TSSA-Certified Coverage</h3>
-          <p>Support built around licensed operating engineer coverage requirements.</p>
-        </div>
-        <div class="card">
-          <h3>Fast Response</h3>
-          <p>Short-notice availability for emergency, sick, or temporary staffing situations.</p>
-        </div>
-        <div class="card">
-          <h3>Flexible Scheduling</h3>
-          <p>One shift, several days, vacation coverage, or short-term operational support.</p>
-        </div>
-        <div class="card">
-          <h3>Professional Service</h3>
-          <p>Clear communication, dependable scheduling, and a business-focused approach.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <p>📞 519-590-7449</p>
+  <p>📧 ontarioreliefoperatingengineer@gmail.com</p>
+</section>
 
-  <section class="highlight">
-    <div class="container">
-      <h2 class="section-title">Contact</h2>
-      <p class="section-subtitle">
-        Need relief operating engineer coverage? Reach out with your facility location, shift time, and coverage requirements.
-      </p>
+<footer>
+  <p>© 2026 Ontario Relief Operating Engineers</p>
+</footer>
 
-      <div class="contact-box">
-        <p><strong>Phone:</strong> <a href="tel:15195907449">519-590-7449</a></p>
-        <p><strong>Email:</strong> <a href="mailto:ontarioreliefoperatingengineer@gmail.com">ontarioreliefoperatingengineer@gmail.com</a></p>
-        <p><strong>Service Area:</strong> GTA and Southern Ontario</p>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      © 2026 Ontario Relief Operating Engineers. All rights reserved.
-    </div>
-  </footer>
 </body>
 </html>
