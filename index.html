@@ -245,10 +245,6 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    .grid-2 {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
     .card {
       background: #1e293b;
       padding: 24px;
@@ -438,7 +434,6 @@
     @media (max-width: 900px) {
       .hero,
       .grid-3,
-      .grid-2,
       .contact-wrap,
       .image-split,
       .operators-list {
@@ -699,14 +694,18 @@
 
         <div class="form-box">
           <h3>Coverage Request Form</h3>
-          <p>Replace the form action below with your Formspree form ID.</p>
+          <p>Fill out the form and we will review your request.</p>
 
-          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+            <input type="hidden" name="_subject" value="New Engineer Request">
+            <input type="hidden" name="_captcha" value="false">
+
             <input type="text" name="name" placeholder="Your Name" required />
             <input type="text" name="company" placeholder="Company Name" />
             <input type="text" name="location" placeholder="Facility Location" />
             <input type="email" name="email" placeholder="Email Address" required />
             <input type="tel" name="phone" placeholder="Phone Number" />
+
             <select name="coverage_type">
               <option value="">Type of Coverage Needed</option>
               <option>Emergency Coverage</option>
@@ -715,6 +714,7 @@
               <option>Short-Term Support</option>
               <option>Long-Term Coverage</option>
             </select>
+
             <textarea name="details" placeholder="Tell us what coverage you need"></textarea>
             <button type="submit">Submit Request</button>
           </form>
