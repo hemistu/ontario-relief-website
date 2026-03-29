@@ -209,13 +209,16 @@
       overflow: hidden;
       border: 1px solid rgba(255,255,255,0.08);
       box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
     }
 
     .hero-image-wrap img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      min-height: 420px;
+      max-height: 520px;
+      object-fit: contain;
     }
 
     section {
@@ -331,19 +334,6 @@
       font-weight: 800;
     }
 
-    .feature-image {
-      margin-top: 35px;
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .feature-image img {
-      width: 100%;
-      height: 420px;
-      object-fit: cover;
-    }
-
     .contact-wrap {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -444,13 +434,6 @@
         font-size: 38px;
       }
 
-      .hero-image-wrap img,
-      .feature-image img,
-      .image-card img {
-        height: auto;
-        min-height: unset;
-      }
-
       .topbar-inner,
       .nav {
         justify-content: center;
@@ -540,7 +523,7 @@
         </div>
 
         <div class="hero-image-wrap">
-          <img src="ammonia compressor room.jpg" alt="Ammonia compressor room" />
+          <img src="Logo%20-%20new.png" alt="Ontario Relief Operating Engineers shield logo" />
         </div>
       </div>
     </div>
@@ -561,10 +544,6 @@
         <div class="operator-item">3rd Class Stationary Engineers</div>
         <div class="operator-item">4th Class Stationary Engineers</div>
         <div class="operator-item">Plant Relief & Shift Coverage</div>
-      </div>
-
-      <div class="feature-image">
-        <img src="engineer-checking-system.png" alt="Engineer checking system" />
       </div>
     </div>
   </section>
@@ -605,12 +584,16 @@
 
       <div class="image-split">
         <div class="image-card">
-          <img src="Boilers.jpg" alt="Boiler system" />
-          <div class="caption">Boiler system support for industrial and facility operations.</div>
+          <img src="ammonia%20compressor%20room.jpg" alt="Ammonia compressor room" />
+          <div class="caption">
+            Ammonia compressor room coverage for refrigeration plants requiring qualified operating engineer support.
+          </div>
         </div>
         <div class="image-card">
-          <img src="Boilers1.png" alt="Industrial boilers" />
-          <div class="caption">Certified support for boiler rooms and mechanical plant coverage.</div>
+          <img src="epub_Reinhart-int-091120-031-6890-900x550_800x418.jpg" alt="Industrial refrigeration facility" />
+          <div class="caption">
+            Industrial refrigeration and mechanical plant support for emergency, short-term, and long-term coverage needs.
+          </div>
         </div>
       </div>
     </div>
@@ -636,10 +619,6 @@
           <h3>Flexible Staffing</h3>
           <p>Emergency, short-term, and long-term support based on your operational requirements.</p>
         </div>
-      </div>
-
-      <div class="feature-image">
-        <img src="facility-support.jpg" alt="Facility support operations" />
       </div>
     </div>
   </section>
